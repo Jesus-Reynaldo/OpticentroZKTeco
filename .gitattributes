@@ -1,0 +1,11 @@
+* text=auto
+*.cs      text diff=csharp
+*.csproj  text
+*.slnx    text
+*.vdproj  text eol=crlf
+*.dll     binary
+*.sed     text eol=lf
+
+# Reemplaza ErpEndpointUrl, ErpApiKey, ZktecoIp y ZktecoPassword por placeholders al guardar en git.
+# Requiere configurar el filtro localmente (ver README).
+src/OpticentroZKTeco.Service/App.config filter=ocultar-secretos

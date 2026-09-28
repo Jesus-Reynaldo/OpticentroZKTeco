@@ -1,0 +1,30 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="installer/OpticentroZKTeco.Setup.Actions/OpticentroZKTeco.Setup.Actions.csproj" Id="a14ad97f-a117-4c78-a8bc-7aac1e4614ad">
+    <Platform Solution="*|x86" Project="x86" />
+  </Project>
+  <Project Path="installer/OpticentroZKTeco.Setup/OpticentroZKTeco.Setup.vdproj" Type="978c614f-708e-4e1a-b201-565925725dba" Id="fe8e9c85-6dab-4e8c-9d34-1679ede8be69">
+    <Platform Solution="*|x86" Project="?" />
+  </Project>
+  <Project Path="OpticentroZKTeco/OpticentroZKTeco.csproj" Id="d94f74b5-a1fd-403d-ae5f-cedb65216a1a">
+    <Platform Solution="*|x86" Project="x86" />
+  </Project>
+  <Project Path="src/OpticentroZKTeco.Application/OpticentroZKTeco.Application.csproj" Id="c3d0a8f1-7b49-40ec-a958-35c798ffdaa2">
+    <Platform Solution="*|x86" Project="x86" />
+  </Project>
+  <Project Path="src/OpticentroZKTeco.Domain/OpticentroZKTeco.Domain.csproj" Id="00545d29-3b26-4ad2-970a-733701f3ecf4">
+    <Platform Solution="*|x86" Project="x86" />
+  </Project>
+  <Project Path="src/OpticentroZKTeco.Infrastructure/OpticentroZKTeco.Infrastructure.csproj" Id="ff1fc66b-8ac3-4925-8d67-820120150b6b">
+    <Platform Solution="*|x86" Project="x86" />
+  </Project>
+  <Project Path="src/OpticentroZKTeco.Service/OpticentroZKTeco.Service.csproj" Id="a39abded-3f65-4f7d-83da-99fc6ed93083">
+    <Platform Solution="*|x86" Project="x86" />
+  </Project>
+  <Project Path="test/OpticentroZKTeco.Application.Tests/OpticentroZKTeco.Application.Tests.csproj" Id="f1399b61-740c-4a4c-b1b6-14ef4733de94">
+    <Platform Solution="*|x86" Project="x86" />
+  </Project>
+</Solution>

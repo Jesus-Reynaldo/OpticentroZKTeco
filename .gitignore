@@ -1,0 +1,24 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userprefs
+
+# Build output
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x86/
+x64/
+packages/
+TestResults/
+
+# Instalador: artefactos generados (el .msi lleva App.config con la API key incrustada)
+*.msi
+installer/OpticentroZKTeco.Setup/setup.exe
+*.log
+instalador.log.txt
+
+# Secretos locales
+*.secrets.config
