@@ -13,18 +13,18 @@ biométrico ZKTeco y las sincroniza con el ERP de Opticentro.
 Detalles de requisitos e instalador: `requirements.md`, `requirements_horario.md`,
 `plan-instalador.md`.
 
-## Valores sensibles de `App.config`
+## Configuración
 
-`src/OpticentroZKTeco.Service/App.config` se guarda en git con placeholders en `ErpEndpointUrl`,
-`ErpApiKey`, `ZktecoIp` y `ZktecoPassword`. Un filtro de git (`tools/ocultar-secretos.sed`) los
-reemplaza al hacer commit, así tu copia local puede conservar los valores reales para compilar
-el `.msi`. Después de clonar, configura el filtro una vez:
+Antes de compilar, edita `src/OpticentroZKTeco.Service/App.config` y reemplaza los valores de ejemplo:
 
-```sh
-git config filter.ocultar-secretos.clean "sed -E -f tools/ocultar-secretos.sed"
-git config filter.ocultar-secretos.smudge cat
-git config filter.ocultar-secretos.required true
-```
+| Clave | Descripción |
+|---|---|
+| `ZktecoIp` | IP del reloj biométrico ZKTeco. |
+| `ZktecoPuerto` | Puerto del reloj (por defecto `4370`). |
+| `ZktecoPassword` | Contraseña de comunicación del reloj (vacío si no tiene). |
+| `ErpEndpointUrl` | URL del endpoint del ERP que recibe las marcaciones. |
+| `ErpApiKey` | API key del ERP (se envía en el header `X-Api-Key`). |
+| `HoraSincronizacion` | Hora diaria de sincronización (`HH:mm`). |
+| `DiasRecuperacion` | Días hacia atrás que se recuperan en cada sincronización. |
 
-Luego coloca los valores reales en tu `App.config` local antes de compilar el instalador.
-Si agregas otra clave sensible, añádela a `tools/ocultar-secretos.sed`.
+No subas tus valores reales al repositorio.
